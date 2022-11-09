@@ -1,0 +1,80 @@
+
+.nav {
+    position: sticky;
+    justify-content: center;
+    height: 90px;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    background: #001e2b;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: 10;
+}
+
+.nav-container-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    margin: 1rem;
+    min-width: 200px;
+    width: 500px;
+}
+.search-bar {
+    width: 400px;
+    height: 30px;
+    border-radius: 1rem;
+    min-width: 200px;
+    margin-right: -40px;
+}
+
+.nav-container-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    margin: 1rem;
+    justify-content: left;
+    width: 400px;
+}
+
+.nav-container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    margin: 1rem;
+    justify-content: right;
+    width: 400px;
+}
+.nav-container-public {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    margin: 1rem;
+    justify-content: right;
+    width: 300px;
+}
+
+.button-public {
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 1rem;
+    background: #01ed64;
+    flex-wrap: wrap;
+    cursor: pointer;
+    justify-items: left;
+}
+.button-public:hover{
+    background: #009b41;
+}
+
+.button-home-login{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
