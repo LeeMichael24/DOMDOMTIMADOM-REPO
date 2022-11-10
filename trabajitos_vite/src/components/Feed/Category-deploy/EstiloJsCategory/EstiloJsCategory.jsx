@@ -1,0 +1,5 @@
+const EstiloJsCategory = () => {
+    return (
+        ''
+    )
+}
