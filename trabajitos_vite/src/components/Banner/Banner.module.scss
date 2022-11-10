@@ -1,0 +1,28 @@
+.banner-section{
+    width: 100%;
+    padding: 0;
+    background: #eee;
+    justify-content: center;
+
+    
+}
+.image-figure {
+    text-align: center;
+    justify-content: center;
+}
+
+.image-banner{
+    width: 1210px;
+    height: 300px;
+    display: block;
+    margin: auto; 
+}
+
+hr{
+    height: 3px;
+    width: 97%;
+    margin-left: 20px;
+    color: #01ed64;
+    background-color: #01ed64;
+    border-radius: 0 30px 30px 30px 0;
+}
