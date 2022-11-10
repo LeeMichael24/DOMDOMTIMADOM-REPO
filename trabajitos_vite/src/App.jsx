@@ -1,5 +1,6 @@
 import classes from "./App.module.scss";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import DOMDOMTIMADOM from "./components/Main/Main"; 
 
 
@@ -10,8 +11,10 @@ function App() {
     {/* Header */}
     <Header />
     {/* Main */}
-{/*     <Main /> */}
+
     {/* Footer */}
+
+    <Footer />
 
     </div>
   )
