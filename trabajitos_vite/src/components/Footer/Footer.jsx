@@ -1,25 +1,37 @@
 import classes from "./Footer.module.scss";
 
+import ModalAboutUs from "./Modal-AboutUs/Modal-AboutUs";
+import ModalContact from "./Modal-Contact/Modal-Contact";
+
+import React, { useState } from 'react';
+
 
 const Footer = () => {
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
 
     return (
+    <>
+
         <footer className={classes["footer"]}>
             <section className={classes["section"]}>
                 <div className={classes["container"]}>
                     <div className={classes["c"]}>
-                        <button className={classes["open"]}>
+                        <button className={classes["open"]} >
                             Sobre nosotros
                         </button>
                     </div>
                     <div className={classes["c"]}>
-                        <button className={classes["open2"]}>
+                        <button className={classes["open2"]} onClick = {handleShow} >
                             Contáctanos
                         </button>
                     </div>
                     <div className={classes["c"]}>
-                        <button className={classes["open3"]}>
+                        <button className={classes["open3"]} >
                             Políticas
                         </button>
                     </div>
@@ -45,7 +57,11 @@ const Footer = () => {
 
             </section>
 
+            <ModalContact show ={show} handleClose = {handleClose}/>
+
+
         </footer>
+        </>
     )
 }
 

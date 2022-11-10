@@ -6,6 +6,11 @@ import ErrorBoundary from './components/ErrorBoundary';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId="560483202227-e005tg2o3les19elj9rkl728lh2d3rc4.apps.googleusercontent.com">
