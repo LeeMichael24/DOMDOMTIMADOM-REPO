@@ -12,16 +12,13 @@ function App() {
 
       {/* Header */}
       <Header />
-
       {/* Main */}
       <main>
         <Banner />
         <Feed />
       </main>
       {/* Footer */}
-
       <Footer />
-
     </div>
   )
 }

@@ -15,7 +15,6 @@ const Header = () => {
 
     return (
 
-        <>
             <header className={classes['Header']}>
                 <nav className={classes['nav']}>
                     <div className={classes["nav-container-home"]}>
@@ -32,16 +31,13 @@ const Header = () => {
                     <div className={classes["nav-container-login"]}>
                         <figure>
 
-                            <button className={classes['button-login']}  onClick = {handleShow}> <img width="30px" src={logoLogin}/> </button>
+                            <button className={classes['button-login']}  onClick = {handleShow}> <img width="55px" src={logoLogin}/> </button>
                             
                         </figure>
                     </div>
                 </nav>
                 <ModalLogin show ={show} handleClose = {handleClose}/>
             </header>
-
-        </>
-
     )
 }
 

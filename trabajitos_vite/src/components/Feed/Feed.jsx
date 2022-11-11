@@ -1,11 +1,13 @@
 import classes from './Feed.module.scss';
 import Cards from './Cards/Cards';
-import CategoryDeploy from './Category-deploy/CategoryDeploy';
+import AlwaysOpenExample from './Accordion/Accordion';
+
 
 const Feed = () => {
     return(
         <section className={classes['section-total']}>
-            <CategoryDeploy />
+            <AlwaysOpenExample />
+
             <Cards />
         </section>
     )
