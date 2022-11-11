@@ -1,12 +1,12 @@
 import classes from './Feed.module.scss';
 import Cards from './Cards/Cards';
-import AlwaysOpenExample from './Accordion/Accordion';
+import Accordion from './Accordion/Accordion';
 
 
 const Feed = () => {
     return(
         <section className={classes['section-total']}>
-            <AlwaysOpenExample />
+            <Accordion />
 
             <Cards />
         </section>
