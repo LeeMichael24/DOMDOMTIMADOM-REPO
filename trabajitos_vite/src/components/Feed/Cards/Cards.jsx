@@ -7,7 +7,7 @@ import rating from '../../../assets/images/rating.png';
 const Cards = () => {
     return (
         <div className={classes["section-derecha"]}>
-            <h1>DOMDOM TIMADOM dueño de todas las granjas 'TIMADOM'</h1>
+            <h1>Seccion de cards "Contenido dinamico"</h1>
             
         </div>
     )
