@@ -7,3 +7,18 @@
     text-align: center;
 }
 
+.card-text{
+    text-align: left;
+}
+
+.Card{
+    cursor: pointer;
+}
+
+.Card:hover{
+    border-color: #01ed64;
+    transition: 0.2s;
+    box-shadow: 9px 9px 4.5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
+}

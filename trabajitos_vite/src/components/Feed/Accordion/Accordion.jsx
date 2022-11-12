@@ -6,7 +6,7 @@ function AlwaysOpenExample() {
   return (
     <div className={classes['div-accordion']}>
             <h1 className={classes['h1']}>Categorias</h1>
-            <hr className={classes['hr']}/>
+            <hr className={classes['hr-accordion']}/>
         <Accordion className={classes['Accordion']} defaultActiveKey={['0']} >
         <Accordion.Item eventKey="0">
         </Accordion.Item>
