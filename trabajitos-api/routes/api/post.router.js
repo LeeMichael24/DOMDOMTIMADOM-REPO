@@ -1,22 +1,30 @@
 const express = require("express");
 const router = express.Router();
 
-const posts = require('../../data/posts.example.json');
+const postController = require("../../controllers/post.controller");
 
-router.get("/", (req, res, next) => {
-    return res.status(200).json({ posts });
-});
+const postValidators = require("../../validators/post.validators");
+const runValidators = require("../../validators/index.middleware")
 
-router.get("/:identifier", (req, res) => {
-    const id = req.params.identifier;
+router.get("/", postController.findAll);
 
-    const post = posts.find(p => p.id === id)
+router.get("/:identifier",
+    postValidators.findByIdValidator,
+    runValidators,
+    postController.findOneById);
 
-    if(!post) {
-        return res.status(404).json({ error: "Post no encontrado"});
-    }
-
-    return res.status(200).json( post );
-})
+router.post("/",
+    postValidators.createPostValidator,
+    runValidators,
+    postController.create);
 
 module.exports = router;
+
+
+//validdciones de id
+//postValidators.findByIdValidator,
+//runValidators,
+
+//validaciones crear
+//postValidators.createPostValidator,
+//runValidators,
