@@ -1,0 +1,194 @@
+.container{
+    position: relative;
+    background-color: #fff;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0  35px 55px rgba(0,0,0,0.1);
+}
+
+
+/* Izquierda */
+
+.container .left_side{
+    position: relative;
+    background-color: rgb(2, 16, 54);
+    padding: 40px;
+    width: 400px;
+}
+
+.container .left_side{
+    position: relative;
+    background-color: rgb(2, 16, 54);
+    padding: 40px;
+}
+
+
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(225,225,225,0.2);
+
+}
+
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+
+/* Contactame */
+
+.contactInfo{
+    padding-top: 40px;
+}
+
+
+.title{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+
+.contactInfo ul{
+    position: relative;
+}
+
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: aqua;
+}
+
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.textArea{
+    max-width: 320px;
+}
+
+
+/* Valoracion */
+
+.form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  .form p {
+    text-align: center;
+  }
+  
+  .form label {
+    font-size: 20px;
+    
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: rgb(255, 255, 255);
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+
+
+/* Derecha */
+
+.container .right_side{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+
+
+/* Datos generales */
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.title2{
+    color: rgb(2, 16, 54);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+
+.descripcion{
+    text-align: justify;
+    
+}
+
+.abilities{
+    margin-bottom: 50px;
+}
+
+.abilities:last-child{
+    margin-bottom: 0;
+}

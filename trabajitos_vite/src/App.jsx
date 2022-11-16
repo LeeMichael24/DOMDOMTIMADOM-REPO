@@ -4,7 +4,9 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Feed from "./components/Feed/Feed";
 import Banner from "./components/Banner/Banner";
+import Form_page2 from "./components/Form_page2/form_page2"
 
+import carousel from "./components/Form_page2/valoracion/valoracion";
 
 
 function App() {
@@ -15,9 +17,14 @@ function App() {
       <Header />
       {/* Main */}
       <main>
-        <Banner />
+       {/*  <Banner />
+      
+        <Feed /> */}
 
-        <Feed />
+        <Form_page2 /> 
+
+       
+
       </main>
       {/* Footer */}
       <Footer />
