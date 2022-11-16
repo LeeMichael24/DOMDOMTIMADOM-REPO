@@ -21,18 +21,6 @@ function AlwaysOpenExample() {
             <Accordion.Body>
                 Pintor             
             </Accordion.Body>
-            <Accordion.Body>
-                Carpintero             
-            </Accordion.Body>
-            <Accordion.Body>
-                Albañil             
-            </Accordion.Body>
-            <Accordion.Body>
-                Frontanero             
-            </Accordion.Body>
-            <Accordion.Body>
-                Cerrajero             
-            </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
             <Accordion.Header>Eduación</Accordion.Header>

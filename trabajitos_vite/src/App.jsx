@@ -7,7 +7,6 @@ import Banner from "./components/Banner/Banner";
 
 
 
-
 function App() {
   return (
     <div className={classes["App"]}>
@@ -17,6 +16,7 @@ function App() {
       {/* Main */}
       <main>
         <Banner />
+
         <Feed />
       </main>
       {/* Footer */}
