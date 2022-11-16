@@ -20,7 +20,7 @@ validators.createPostValidator = [
         .withMessage("El nombre no debe ser vacio"),
     body("direccion")
         .notEmpty()
-        .withMessage("El nombre no debe ser vacio"),
+        .withMessage("Debe escribir su direccion"),
     body("apellido")
         .notEmpty()
         .withMessage("El nombre no debe ser vacio")
