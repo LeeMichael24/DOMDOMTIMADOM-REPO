@@ -3,32 +3,17 @@ const Schema = Mongoose.Schema;
 
 
 const PostSchema = new Schema({
-    nombre: {
+    title: {
         type: String,
         trim: true,
         required: true
     },
-    apellido: {
+    number: {
         type: String,
         trim: true,
         required: true
     },
-    email: {
-        type: String,
-        trim: true,
-        required: true
-    },
-    telefono: {
-        type: String,
-        trim: true,
-        required: true
-    },
-    direccion: {
-        type: String,
-        trim: true,
-        required: true
-    },
-    descripcion: {
+    description: {
         type: String,
         trim: true,
         required: true
