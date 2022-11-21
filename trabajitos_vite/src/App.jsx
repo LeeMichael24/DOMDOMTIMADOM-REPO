@@ -17,11 +17,11 @@ function App() {
       <Header />
       {/* Main */}
       <main>
-       {/*  <Banner />
+       <Banner />
       
-        <Feed /> */}
+        <Feed />
 
-        <Form_page2 /> 
+      {/* <Form_page2 />  */}
 
        
 
