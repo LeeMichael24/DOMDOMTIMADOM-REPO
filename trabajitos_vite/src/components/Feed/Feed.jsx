@@ -26,7 +26,7 @@ const Feed = () => {
     }
   }
 
-  const savePost = async (name, lastName, email, number, location, description, image) => {
+  const savePost = async (name, lastName, email, number, location, description, image, imageProfile) => {
     try { 
       const response = await fetch('http://localhost:3500/api/post/', { 
         method: 'POST',
@@ -34,7 +34,7 @@ const Feed = () => {
           "Content-Type": "application/json"
         }, 
         body: JSON.stringify({
-          name, lastName, email, number, location, description, image
+          name, lastName, email, number, location, description, image, imageProfile
         })
        });
 
@@ -49,32 +49,14 @@ const Feed = () => {
         toast.warm(msg[response.status.toString()] || 'Unexpected error')
        }
     } catch (error) {
-      toast.error("Unexpedted error")
+      toast.error("Unexpedted error savePost")
     }
   }
 
-  const onAddPostHandler = (name, lastName, email, number, location, description, image) => {
-/*     const _posts = [...posts, {
-      _id: new Date().getTime().toString(),
-      name: name,
-      description: description,
-      number: number,
-      image: image
-    }]; */
+  const onAddPostHandler = async (name, lastName, email, number, location, description, image, imageProfile) => {
 
-  /*     _posts.push({
-      _id: new Date().getTime().toString(),
-      name: name,
-      description: description,
-      number: number,
-      image: image
-    }) */
-
-    /* setPosts(_posts); */
-
-    savePost(name, lastName, email, number, location, description, image)
+    await savePost(name, lastName, email, number, location, description, image, imageProfile);
     fetchPosts();
-
   }
 
     return(

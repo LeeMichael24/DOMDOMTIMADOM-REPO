@@ -133,7 +133,7 @@
     display: none;
   }
   
-  label {
+  .label-rate {
     color: rgb(255, 255, 255);
   }
   
@@ -142,12 +142,12 @@
     unicode-bidi: bidi-override;
   }
   
-  label:hover,
-  label:hover ~ label {
+  .label-rate:hover,
+  .label-rate:hover ~ .label-rate {
     color: orange;
   }
   
-  input[type="radio"]:checked ~ label {
+  input[type="radio"]:checked ~ .label-rate {
     color: orange;
   }
 

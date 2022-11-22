@@ -5,27 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 
-const Form_page2 = () => {
-    const onSubmitHandler = (e) => {
-        e.preventDefault();
-
-        const data = new FormData(e.target);
-        console.log("Enviando formulario");
-
-        console.log({
-            name: data.get("name"),
-            lastName: data.get("lastName"),
-            email: data.get("email"),
-            number: data.get("number"),
-            location: data.get("location"),
-            description: data.get("description"),
-            image: data.get("image"),
-
-        });
-        /* Ejecutar el insert */
-        onAddPost(data.get('title'), data.get('description'), data.get('number'), data.get('image'));
-    }
-
+const Form_page2 = ({ name='', lastName='', email='', number='', location='', description='', image='', imageProfile='' }) => {
     return (
         <div className={classes["container"]}>
 
@@ -34,9 +14,9 @@ const Form_page2 = () => {
             <div className={classes["left_side"]}>
                 <div className={classes["profileText"]}>
                     <div className={classes["imgBx"]}>
-                        <img src="https://cdn-icons-png.flaticon.com/512/4202/4202831.png" alt="" />
+                        <img src={ imageProfile } alt="" />
                     </div>
-                    <h2> Mauri <br /> <span> Desarrollador Web</span></h2>
+                    <h2> {name} { lastName } <br /> <span> Desarrollador Web</span></h2>
                 </div>
 
                 {/* < Contactame >  */}
@@ -47,19 +27,19 @@ const Form_page2 = () => {
                         <li>
                             <span className={classes["icon"]}><i className="fa fa-phone" aria-hclassNameden="true"></i>
                             </span>
-                            <span className={classes["text"]}> 7209-6062 </span>
+                            <span className={classes["text"]}> { number } </span>
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <span className={classes["icon"]}><i className="fa fa-envelope" aria-hclassNameden="true"></i> </span>
-                            <span className={classes["text"]} > gerardoa@uca.com </span>
+                            <span className={classes["text"]} > { email } </span>
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <span className={classes["icon"]}><i className="fa fa-map-marker" aria-hclassNameden="true"></i> </span>
-                            <span className={classes["text"]}> Lomas de miralvalle </span>
+                            <span className={classes["text"]}> { location } </span>
                         </li>
                     </ul>
                 </div>
@@ -73,23 +53,23 @@ const Form_page2 = () => {
                         <p className={classes["clasificacion"]} >
                             <input calssName={classes["radio1"]} type="radio" name="estrellas" value="5" />
 
-                            <label for="radio1">★</label>
+                            <label className={classes["label-rate"]} for="radio1">★</label>
 
                             <input calssName={classes["radio2"]} type="radio" name="estrellas" value="4" />
 
-                            <label for="radio2">★</label>
+                            <label className={classes["label-rate"]} for="radio2">★</label>
 
                             <input calssName={classes["radio3"]} type="radio" name="estrellas" value="3" />
 
-                            <label for="radio3">★</label>
+                            <label className={classes["label-rate"]} for="radio3">★</label>
 
                             <input calssName={classes["radio4"]} type="radio" name="estrellas" value="2" />
 
-                            <label for="radio4">★</label>
+                            <label className={classes["label-rate"]} for="radio4">★</label>
 
                             <input calssName={classes["radio5"]} type="radio" name="estrellas" value="1" />
 
-                            <label for="radio5">★</label>
+                            <label className={classes["label-rate"]} for="radio5">★</label>
                         </p>
                     </form>
                 </div>
@@ -110,19 +90,13 @@ const Form_page2 = () => {
             <div className={classes["right_side"]}>
                 <div className={classes["about"]}>
                     <h2 className={classes["title2"]}>Datos generales</h2>
-                    <p className={classes["descripcion"]}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, className nobis quis numquam quae labore
-                        similique quisquam nulla omnis eaque. Impedit earum sed, sint animi nobis temporibus aliquam quaerat
-                        veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. AliquclassName, mollitia fugiat. Soluta fugiat ducimus reprehenderit,
-                        eligendi quaerat similique saepe aut impedit molestiae suscipit earum! Neque corrupti aliquam magnam ab at?
+                    <p className={classes["descripcion"]}>{ description }
                     </p>
                 </div>
 
                 <div className={classes["abilities"]}>
                     <h2 className={classes["title2"]}> Habilidades</h2>
-                    <p className={classes["descripcion"]}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, className nobis quis numquam quae labore
-                        similique quisquam nulla omnis eaque. Impedit earum sed, sint animi nobis temporibus aliquam quaerat
-                        veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. AliquclassName, mollitia fugiat. Soluta fugiat ducimus reprehenderit,
-                        eligendi quaerat similique saepe aut impedit molestiae suscipit earum! Neque corrupti aliquam magnam ab at?
+                    <p className={classes["descripcion"]}>{ description }
                     </p>
                 </div>
 
@@ -134,7 +108,7 @@ const Form_page2 = () => {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://www.metroworldnews.com/resizer/txczNNHfsqinSs4WX86ZoDGjsiQ=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/DKJN7STOHJHAPDR56UN2N2Z4FI.jpeg"
+                                src={ image }
                                 alt="First slide"
                             />
                             <Carousel.Caption>
@@ -145,7 +119,7 @@ const Form_page2 = () => {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/SA255WF2DNFMDE6SAYZMNKCMCA.jpg"
+                                src={ image }
                                 alt="Second slide"
                             />
 
@@ -157,7 +131,7 @@ const Form_page2 = () => {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://phantom-marca-us.unidadeditorial.es/d9a31dbab16b1a68a8b3d128c2028553/resize/1320/f/jpg/assets/multimedia/imagenes/2022/10/23/16665351611744.jpg"
+                                src={ image }
                                 alt="Third slide"
                             />
 
