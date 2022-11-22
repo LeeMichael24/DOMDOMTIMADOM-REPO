@@ -39,7 +39,7 @@ const Contact = ({ show, handleClose }) => {
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Enviar
-          </Button>
+            </Button>
         </Modal.Footer>
       </Modal>
     );

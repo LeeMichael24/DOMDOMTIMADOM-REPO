@@ -68,7 +68,7 @@
     width: 300px;
 }
 
-.button-public {
+.public {
     width: 130px;
     height: 35px;
     border: none;
@@ -77,8 +77,12 @@
     flex-wrap: wrap;
     cursor: pointer;
     justify-items: left;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    color: #001e2b;
 }
-.button-public:hover{
+.public:hover{
     background: #009b41;
 }
 
