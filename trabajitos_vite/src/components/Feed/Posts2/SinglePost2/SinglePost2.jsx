@@ -1,11 +1,10 @@
-import classes from "./form_page2.module.scss";
-import valoracion from './valoracion/valoracion';
-
+import classes from "./SinglePost2.module.scss";
+import valoracion from '../valoracion/valoracion';
 import Carousel from 'react-bootstrap/Carousel';
 
 
 
-const Form_page2 = ({ name='', lastName='', email='', number='', location='', description='', image='', imageProfile='' }) => {
+const SinglePost2 = ({ name='', lastName='', email='', number='', location='', description='', image='', imageProfile='' }) => {
     return (
         <div className={classes["container"]}>
 
@@ -154,4 +153,4 @@ const Form_page2 = ({ name='', lastName='', email='', number='', location='', de
 
 }
 
-export default Form_page2;
+export default SinglePost2;

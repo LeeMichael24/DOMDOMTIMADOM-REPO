@@ -3,10 +3,8 @@ import classes from "./App.module.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Feed from "./components/Feed/Feed";
-
-import Form_page2 from "./components/Form_page2/form_page2"
-
-import carousel from "./components/Form_page2/valoracion/valoracion";
+import formularioPrueba from "./components/FormularioPrueba/FormularioPrueba";
+import carousel from "./components/Feed/Posts2/valoracion/valoracion";
 
 import {
   BrowserRouter as Router,
@@ -18,6 +16,7 @@ import {
 
 
 import SinglePost from "./components/Feed/Posts /SinglePost/SinglePost";
+import Posts2 from "./components/Feed/Posts2/Posts2";
 
 
 
@@ -30,13 +29,12 @@ function App() {
     <Router>
       
       <Header />
-     
       <Routes>
         <Route path="/" element={<Feed />}> </Route>
-        
-        <Route path="info" element={<Form_page2/>}> </Route>
+{/*         <Route path="info" element={<Form_page2/>}> </Route>
+        <Route path="visualForm" element={<Form_page2/>}> </Route> */}
+        <Route path="m" element={<formularioPrueba/>}> </Route>
 
-        <Route path="form" element={<Form_page2/>}> </Route>
       </Routes>
 
       <Footer />

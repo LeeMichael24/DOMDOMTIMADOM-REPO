@@ -4,14 +4,27 @@ import SinglePost from './SinglePost/SinglePost';
 
 const Posts = ({ posts = {} }) => {
     const mappedPosts = posts.map(post => {
-        return(
+        return( 
+            <>      
             <SinglePost 
             key={post._id}
-            title={post.title}
+            name={post.name}
+            lastName={post.lastName}
+            number={post.number}
+            image={post.image}
+            />
+{/*             <Form_page2
+            key={post._id}
+            name={post.name}
+            lastName={post.lastName}
+            email={post.email}
+            number={post.number}
             description={post.description}
             image={post.image}
-            number={post.number}
-            />
+            imageProfile={post.imageProfile}
+            /> */}
+            </>
+
         )
     })
     return(
