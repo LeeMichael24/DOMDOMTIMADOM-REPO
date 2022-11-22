@@ -6,7 +6,7 @@ const controller = {};
 
 controller.create = async (req, res) => {
     try {
-        const {name, lasName, email, number, location, description, image} = req.body;
+        const {name, lasName, email, number, location, description, image, imageProfile} = req.body;
 
    const post = new Post({
     name: name,
@@ -15,7 +15,8 @@ controller.create = async (req, res) => {
     number: number,
     location: location,
     description: description,
-    image: image
+    image: image,
+    imageProfile: imageProfile,
    });
 
    const newPost = await post.save();

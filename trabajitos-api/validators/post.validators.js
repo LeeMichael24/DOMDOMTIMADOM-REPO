@@ -24,6 +24,10 @@ validators.createPostValidator = [
     body("location")
         .notEmpty()
         .withMessage("Debe escribir su direccion"),
+    body("imageProfile")
+        .optional()
+        .notEmpty().withMessage("Debes de colocar una imagen")
+        .isURL().withMessage("La imagen debe ser una URL"),
 
 ];
 

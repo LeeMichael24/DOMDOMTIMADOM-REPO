@@ -35,6 +35,11 @@ const PostSchema = new Schema({
     },
     image: {
         type: String,
+        required: true
+    },
+    imageProfile: {
+        type: String,
+        required: true
     },
     hidden: {
         type: Boolean,
