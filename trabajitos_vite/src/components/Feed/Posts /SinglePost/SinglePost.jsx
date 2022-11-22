@@ -7,7 +7,7 @@ import classes from './SinglePost.module.scss';
 function SinglePost({title ='', description ='', image ='', number =''}) {
   return (
       <div className={classes['section-singlepost']}>
-          {Array.from({ length: 1 }).map((_, idx) => (
+          {Array.from({ length: 2 }).map((_, idx) => (
               <Col>
               <Card className={classes['Card']}>
                   <Card.Img variant="top" src={ image } />

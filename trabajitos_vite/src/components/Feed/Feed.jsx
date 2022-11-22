@@ -4,6 +4,7 @@ import Accordion from './Accordion/Accordion';
 import { useState, useEffect } from 'react';
 import FormularioPrueba from '../../components/FormularioPrueba/FormularioPrueba';
 import { toast } from 'react-toastify';
+import Banner from './Banner/Banner';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -25,7 +26,7 @@ const Feed = () => {
     }
   }
 
-  const savePost = async (title, description, number, image) => {
+  const savePost = async (name, lastName, email, number, location, description, image) => {
     try { 
       const response = await fetch('http://localhost:3500/api/post/', { 
         method: 'POST',
@@ -33,7 +34,7 @@ const Feed = () => {
           "Content-Type": "application/json"
         }, 
         body: JSON.stringify({
-          title, description,number, image
+          name, lastName, email, number, location, description, image
         })
        });
 
@@ -47,16 +48,15 @@ const Feed = () => {
 
         toast.warm(msg[response.status.toString()] || 'Unexpected error')
        }
-       
     } catch (error) {
       toast.error("Unexpedted error")
     }
   }
 
-  const onAddPostHandler = (title, description, number, image) => {
+  const onAddPostHandler = (name, lastName, email, number, location, description, image) => {
 /*     const _posts = [...posts, {
       _id: new Date().getTime().toString(),
-      title: title,
+      name: name,
       description: description,
       number: number,
       image: image
@@ -64,7 +64,7 @@ const Feed = () => {
 
   /*     _posts.push({
       _id: new Date().getTime().toString(),
-      title: title,
+      name: name,
       description: description,
       number: number,
       image: image
@@ -72,13 +72,14 @@ const Feed = () => {
 
     /* setPosts(_posts); */
 
-    savePost(title, description, number, image)
+    savePost(name, lastName, email, number, location, description, image)
     fetchPosts();
 
   }
 
     return(
       <section>
+            <Banner />
             <FormularioPrueba onAddPost={onAddPostHandler}/>
           <section className={classes['section-total']}>
               <Accordion />

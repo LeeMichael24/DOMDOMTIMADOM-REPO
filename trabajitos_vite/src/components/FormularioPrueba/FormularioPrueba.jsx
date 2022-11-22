@@ -9,10 +9,14 @@ const formularioPrueba = ( {onAddPost} ) => {
         console.log("Enviando formulario");
 
         console.log({
-            title: data.get("title"),
+            name: data.get("name"),
+            lastName: data.get("lastName"),
+            email: data.get("email"),
+            number: data.get("number"),
+            location: data.get("location"),
             description: data.get("description"),
             image: data.get("image"),
-            number: data.get("number")
+
         });
         /* Ejecutar el insert */
         onAddPost(data.get('title'), data.get('description'), data.get('number'), data.get('image'));

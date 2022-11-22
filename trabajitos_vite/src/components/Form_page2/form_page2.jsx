@@ -6,6 +6,26 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 const Form_page2 = () => {
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+
+        const data = new FormData(e.target);
+        console.log("Enviando formulario");
+
+        console.log({
+            name: data.get("name"),
+            lastName: data.get("lastName"),
+            email: data.get("email"),
+            number: data.get("number"),
+            location: data.get("location"),
+            description: data.get("description"),
+            image: data.get("image"),
+
+        });
+        /* Ejecutar el insert */
+        onAddPost(data.get('title'), data.get('description'), data.get('number'), data.get('image'));
+    }
+
     return (
         <div className={classes["container"]}>
 

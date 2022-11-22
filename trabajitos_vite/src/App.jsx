@@ -1,34 +1,41 @@
-
+import React from "react";
 import classes from "./App.module.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Feed from "./components/Feed/Feed";
-import Banner from "./components/Banner/Banner";
+import Banner from "./components/Feed/Banner/Banner";
 import Form_page2 from "./components/Form_page2/form_page2"
 
 import carousel from "./components/Form_page2/valoracion/valoracion";
 
 
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+
+} from "react-router-dom";
+
+
+
 function App() {
   return (
-    <div className={classes["App"]}>
 
-      {/* Header */}
+
+    <Router>
       <Header />
-      {/* Main */}
-      <main>
-       <Banner />
-      
-        <Feed />
+      <Routes>
+        <Route path="/" element={<Feed />}> </Route>
 
-      {/* <Form_page2 />  */}
+        <Route path="info" element={<Form_page2/>}> </Route>
+        <Route path="form" element={<Form_page2/>}> </Route>
+      </Routes>
 
-       
-
-      </main>
-      {/* Footer */}
       <Footer />
-    </div>
+    </Router>
+
   )
 }
 
