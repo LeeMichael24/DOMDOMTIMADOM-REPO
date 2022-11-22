@@ -6,11 +6,11 @@ const controller = {};
 
 controller.create = async (req, res) => {
     try {
-        const {name, lasName, email, number, location, description, image, imageProfile} = req.body;
+        const {name, lastName, email, number, location, description, image, imageProfile} = req.body;
 
    const post = new Post({
     name: name,
-    lasName: lasName,
+    lastName: lastName,
     email: email,
     number: number,
     location: location,
