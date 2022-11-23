@@ -51,7 +51,7 @@ userSchema.methods ={
         return crypto.randomBytes(16).toString("hex");
     },
     comparePassword: function(password){
-        return this.password === this.encryptPassword(password);
+        return this.hashedpassword == this.encryptPassword(password);
     }
 }
 
