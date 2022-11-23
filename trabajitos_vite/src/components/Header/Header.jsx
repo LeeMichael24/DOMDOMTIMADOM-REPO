@@ -30,7 +30,7 @@ const Header = () => {
                 </div>
                 <div className={classes["nav-container-public"]}>
 
-                    <Link className={classes["public"]} to="info"> Publicar </Link>
+                    <Link className={classes["public"]} to="fp"> Publicar </Link>
 
                 </div>
                 <div className={classes["nav-container-login"]}>

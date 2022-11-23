@@ -1,5 +1,6 @@
 import classes from '../FormularioPrueba/FormularioPrueba.module.scss';
 
+
 const formularioPrueba = ({ onAddPost = () => {} }) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();

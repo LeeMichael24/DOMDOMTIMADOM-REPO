@@ -1,12 +1,13 @@
-import classes from "./SinglePost2.module.scss";
+import classes from "./Formulario2.module.scss";
 import valoracion from '../valoracion/valoracion';
 import Carousel from 'react-bootstrap/Carousel';
 
 
 
-const SinglePost2 = ({ name='', lastName='', email='', number='', location='', description='', image='', imageProfile='' }) => {
+const formulario2
+ = ({ name='', lastName='', email='', number='', location='', description='', image='', imageProfile='' }) => {
     return (
-        <div className={classes["container"]}>
+        <div className={classes["container"]} >
 
             {/* < Lado izquierdo > */}
 
@@ -150,7 +151,8 @@ const SinglePost2 = ({ name='', lastName='', email='', number='', location='', d
         </div>
 
     )
-
+    
 }
 
-export default SinglePost2;
+export default formulario2
+;

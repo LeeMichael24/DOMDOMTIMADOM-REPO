@@ -2,10 +2,11 @@ import classes from './Feed.module.scss';
 import Posts from './Posts /Posts';
 import Accordion from './Accordion/Accordion';
 import { useState, useEffect } from 'react';
-import FormularioPrueba from '../../components/FormularioPrueba/FormularioPrueba';
 import { toast } from 'react-toastify';
 import Banner from './Banner/Banner';
-import Posts2 from './Posts2/SinglePost2/SinglePost2';
+import FormularioPrueba from "../FormularioPrueba/FormularioPrueba";
+
+
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -63,12 +64,11 @@ const Feed = () => {
     return(
       <section>
             <Banner />
-           <FormularioPrueba onAddPost={onAddPostHandler}/>
+            {/* <FormularioPrueba onAddPost={onAddPostHandler}/> */}
           <section className={classes['section-total']}>
               <Accordion />
               <Posts posts={posts}/>
           </section>
-          <Posts2 posts={posts}/>
       </section>
     )
 }
