@@ -4,18 +4,18 @@ const router = express.Router();
 const postController = require("../../controllers/post.controller");
 
 const postValidators = require("../../validators/post.validators");
-const runValidators = require("../../validators/index.middleware")
+const runValidations = require("../../validators/index.middleware")
 
 router.get("/", postController.findAll);
 
 router.get("/:identifier",
     postValidators.findByIdValidator,
-    runValidators,
+    runValidations,
     postController.findOneById);
 
 router.post("/",
     postValidators.createPostValidator,
-    runValidators,
+    runValidations,
     postController.create);
 
 module.exports = router;
