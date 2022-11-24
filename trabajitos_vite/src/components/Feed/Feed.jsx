@@ -1,12 +1,9 @@
 import classes from './Feed.module.scss';
-import Posts from './Posts /Posts';
+import Posts from './Posts/Posts';
 import Accordion from './Accordion/Accordion';
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Banner from './Banner/Banner';
-import FormularioPrueba from "../FormularioPrueba/FormularioPrueba";
-
-
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -24,43 +21,9 @@ const Feed = () => {
           setPosts(data.posts);
         }
     } catch (error) {
-      toast.error('Unexepected error!');
+      /* toast.error('Unexpected error!'); */
     }
   }
-
-  const savePost = async (name, lastName, email, number, location, description, image, imageProfile) => {
-    try { 
-      const response = await fetch('http://localhost:3500/api/post/', { 
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        }, 
-        body: JSON.stringify({
-          name, lastName, email, number, location, description, image, imageProfile
-        })
-       });
-
-       if(response.ok) {
-        toast.success('Post saved!')
-       } else {
-        const msg = {
-          "400": "wrong fields",
-          "404": "Not found!"
-        }
-
-        toast.warm(msg[response.status.toString()] || 'Unexpected error')
-       }
-    } catch (error) {
-      toast.error("Unexpedted error savePost")
-    }
-  }
-
-  const onAddPostHandler = async (name, lastName, email, number, location, description, image, imageProfile) => {
-
-    await savePost(name, lastName, email, number, location, description, image, imageProfile);
-    fetchPosts();
-  }
-
     return(
       <section>
             <Banner />
@@ -69,6 +32,7 @@ const Feed = () => {
               <Accordion />
               <Posts posts={posts}/>
           </section>
+          {/* <RecibeFormulario3/> */}
       </section>
     )
 }

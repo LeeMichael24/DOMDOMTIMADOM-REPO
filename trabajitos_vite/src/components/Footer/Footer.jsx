@@ -18,7 +18,7 @@ const Footer = () => {
     <>
 
         <footer className={classes["footer"]}>
-            <section className={classes["section"]}>
+            <section className={classes["section-footer"]}>
                 <div className={classes["container"]}>
                     <div className={classes["c"]}>
                         <button className={classes["open"]} >

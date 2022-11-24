@@ -1,5 +1,5 @@
 import classes from "./Header.module.scss";
-import logoReact from '../../assets/images/React.png';
+import trabajitos from '../../assets/images/trabajitos.svg';
 import logoLogin from '../../assets/images/Logo-login.png';
 import { GoogleLogin } from '@react-oauth/google';
 import ModalLogin from "./Modal-Login/modalLogin";
@@ -22,7 +22,7 @@ const Header = () => {
             <nav className={classes['nav']}>
                 <div className={classes["nav-container-home"]}>
                     <figure>
-                        <Link className={classes['button-home-login']} to = "/"><img width="50px" src={logoReact} /></Link>
+                        <Link className={classes['button-home-login']} to = "/"><img width="240px" src={ trabajitos } /></Link>
                     </figure>
                 </div>
                 <div className={classes["nav-container-bar"]}>

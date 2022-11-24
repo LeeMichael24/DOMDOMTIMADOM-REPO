@@ -1,0 +1,65 @@
+
+.card-text{
+    text-align: left;
+}
+
+.Card{
+    cursor: pointer;
+    height: 50px;
+    width: 312px;
+}
+
+.Card:hover{
+    border-color: #01ed64;
+    transition: 0.2s;
+    box-shadow: 9px 9px 4.5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.ver-mas{
+    
+    border: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+.form {
+    width: 250px;
+    margin: 0 auto;
+    height: 30px;
+  }
+  
+  .form p {
+    text-align: center;
+  }
+  
+  .form label {
+    font-size: 23px;
+    
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .label-rate {
+    color: rgb(248, 236, 80);
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  .label-rate:hover,
+  .label-rate:hover ~ .label-rate {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ .label-rate {
+    color: orange;
+  }
+
+

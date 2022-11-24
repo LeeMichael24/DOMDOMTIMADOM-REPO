@@ -5,7 +5,6 @@ import Form from 'react-bootstrap/Form';
 
 
 
-
 const Contact = ({ show, handleClose }) => {
 
 
