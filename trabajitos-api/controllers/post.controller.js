@@ -11,8 +11,6 @@ controller.create = async (req, res) => {
         const { _id: userId } = req.user;
 
 
-
-
    const post = new Post({
     name: name,
     lastName: lastName,
