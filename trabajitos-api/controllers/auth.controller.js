@@ -1,5 +1,8 @@
 const User =  require("../models/User.model");
-const debug =  require("debug")("app:auth-controller")
+const debug =  require("debug")("app:auth-controller");
+const ROLES = require("../data/roles.constants.json")
+
+const { createToken, verifyToken } = require("../utils/jwt.tools");
 
 const controller = {};
 
@@ -25,7 +28,8 @@ controller.register = async (req,res) => {
     const newUser = new User ({
         username: username,
         email: email,
-        password: password
+        password: password,
+        roles: [ROLES.USER]
     })
 
     await newUser.save();
@@ -57,7 +61,16 @@ controller.login = async(req,res) => {
 
 
         //Paso 03: exitoso o no 
-        return res.status(200).json({message: "El usuario ha iniciado sesion"})
+        const token = createToken(user._id);
+
+
+        user.tokens = [token, ...user.tokens.filter(_token => verifyToken(_token)).splice(0,4)];
+        await user.save();
+
+        //Paso 04: Registrar los token
+
+
+        return res.status(200).json({token : token});
 
     } catch (error) {
         debug (error);
