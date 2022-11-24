@@ -11,6 +11,12 @@ const runValidations = require("../../validators/index.middleware");
 const { authentication, authorization } = require("../../middlewares/auth.middewares");
 
 router.get("/", postController.findAll);
+router.get("/own", authentication, postController.findOwn);
+router.get("/user/:identifier",
+    postValidators.findByIdValidator,
+    runValidations,
+    postController.findPostByUser 
+);
 
 router.get("/:identifier",
     postValidators.findByIdValidator,
@@ -19,8 +25,8 @@ router.get("/:identifier",
 
 //Funcionalidad de usuario 
 router.post("/",
-/*     authentication,
-    authorization(ROLES.USER), */
+    authentication,
+    authorization(ROLES.USER),
     postValidators.createPostValidator,
     runValidations,
     postController.create);

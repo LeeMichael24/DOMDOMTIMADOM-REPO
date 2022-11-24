@@ -57,7 +57,10 @@ controller.findOwn = async (req, res) =>{
     try {
         const { _id:userId } = req.user;
 
-        const posts = await Post.find({ user: userId});
+        const posts = 
+        await Post
+        .find({ user: userId})
+        .populate("user", "username email");
         
         return res.status(200).json({ posts})
 
@@ -67,6 +70,20 @@ controller.findOwn = async (req, res) =>{
     }
 }
 
+controller.findPostByUser = async (req, res) => {
+    try {
+        const { identifier } = req.params;
+
+        const posts = await Post.find({ user : identifier, hidden: false});
+
+        return res. status(200).json ({posts})
+
+    } catch (error) {
+        debug({error})
+        return res.status(500).json({error: "Error interno de servidor"})
+    }
+
+}
 
 
 
@@ -75,7 +92,7 @@ controller.findOneById = async (req, res) =>{
     try {
 
       const {identifier} = req.params;
-      const post = await Post.findById(identifier);
+      const post = await Post.findOne({_id: indentifier , hidden : false});
 
       if(!post){
         return res.status(404).json({error: "Post no encontrado"});
