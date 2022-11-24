@@ -7,9 +7,9 @@ const controller = {};
 controller.create = async (req, res) => {
     try {
         const {name, lastName, email, number, location, description, image, imageProfile} = req.body;
-        const { username } = req.user;
+        const { _id: userId } = req.user;
 
-    debug (`Post creado por : ${username}`);
+ 
 
    const post = new Post({
     name: name,
@@ -20,6 +20,7 @@ controller.create = async (req, res) => {
     description: description,
     image: image,
     imageProfile: imageProfile,
+    user : userId
    });
 
    const newPost = await post.save();
@@ -37,8 +38,11 @@ controller.create = async (req, res) => {
 }
 controller.findAll = async (req, res) =>{
     try {
+        const posts = 
+            await Post
+            .find({ hidden: false })
+            .populate("user", "username email");
 
-        const posts = await Post.find({ hidden: false });
         return res.status(200).json ({ posts })
         
     } catch (error) {
@@ -46,6 +50,23 @@ controller.findAll = async (req, res) =>{
         return res.status(500).json({error: "Error interno de servidor"})
     }
 }
+
+controller.findOwn = async (req, res) =>{
+    try {
+        const { _id:userId } = req.user;
+
+        const posts = await Post.find({ user: userId});
+        
+        return res.status(200).json({ posts})
+
+    } catch (error) {
+        debug({error})
+        return res.status(500).json({error: "Error interno de servidor"})
+    }
+}
+
+
+
 
 
 controller.findOneById = async (req, res) =>{
