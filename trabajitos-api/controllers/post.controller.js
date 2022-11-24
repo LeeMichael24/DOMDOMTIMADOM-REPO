@@ -7,9 +7,13 @@ const controller = {};
 controller.create = async (req, res) => {
     try {
         const {name, lastName, email, number, location, description, image, imageProfile} = req.body;
-        const { _id: userId } = req.user;
 
- 
+        const { _id: userId } = req.user;
+        
+/*         const { username } = req.user;
+
+    debug (`Post creado por : ${username}`); */
+
 
    const post = new Post({
     name: name,
