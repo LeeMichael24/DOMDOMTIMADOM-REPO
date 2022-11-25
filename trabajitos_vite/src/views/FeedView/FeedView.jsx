@@ -1,11 +1,11 @@
-import classes from './Feed.module.scss';
+import classes from './FeedView.module.scss';
 import Posts from './Posts/Posts';
 import Accordion from './Accordion/Accordion';
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Banner from './Banner/Banner';
 
-const Feed = () => {
+const FeedView = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -37,5 +37,5 @@ const Feed = () => {
     )
 }
 
-export default Feed;
+export default FeedView;
 

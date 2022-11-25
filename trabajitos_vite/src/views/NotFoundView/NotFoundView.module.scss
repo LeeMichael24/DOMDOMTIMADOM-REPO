@@ -1,0 +1,24 @@
+.container {
+    flex: 1;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 90vh;
+    width: 100%;
+
+
+    h2{
+        font-family: "Montserrat", sans-serif;
+        font-size: 100px;
+        color: rgb(0, 0, 0); 
+        margin: 0 auto;
+    }
+
+    >img {
+        width: 90%;
+        height: 70%;
+        object-fit: cover;
+    }
+}

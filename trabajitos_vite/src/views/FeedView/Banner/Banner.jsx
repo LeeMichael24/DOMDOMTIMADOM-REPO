@@ -1,4 +1,4 @@
-import classes from "../Banner/Banner.module.scss";
+import classes from "./Banner.module.scss";
 import banner11 from "../../../assets/images/banner11.jpg";
 
 

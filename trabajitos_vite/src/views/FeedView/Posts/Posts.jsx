@@ -1,4 +1,4 @@
-import classes from '../Posts/Posts.module.scss';
+import classes from './Posts.module.scss';
 import SinglePost from './SinglePost/SinglePost';
 
 
