@@ -8,8 +8,21 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 
-
 const Header = () => {
+    const [user, setuser] = useState(null) 
+
+    const login = () => {
+      setuser({
+        id: 1,
+        name: 'John'
+      })
+    }
+  
+    const logout = () => setuser(null)
+
+
+
+
 
     const [show, setShow] = useState(false);
 
@@ -36,13 +49,20 @@ const Header = () => {
                 <div className={classes["nav-container-login"]}>
                     <figure>
 
-                        <button className={classes['button-login']} onClick={handleShow}> <img width="55px" src={logoLogin} /> </button>
+                        {/* <button className={classes['button-login']} onClick={handleShow}> <img width="55px" src={logoLogin} /> </button> */}
+
+                        {
+                            user ? (
+                            <button className={classes['button-login']} onClick={logout}> Logout </button>
+                            ): (
+                            <button className={classes['button-login']} onClick={login}> Login </button>
+                            )
+                        }
 
                     </figure>
                 </div>
             </nav>
             <ModalLogin show={show} handleClose={handleClose} />
-
         </header>
     )
 }

@@ -8,44 +8,21 @@ import RecibeFormularioP from './components/ComponenteFomularioPrueba/RecibeForm
 import { 
   BrowserRouter as Router,
   Routes, 
-  Route, 
-  Link 
+  Route
 } from "react-router-dom";
 import FeedView from "./views/FeedView/FeedView";
 import NotFoundView from "./views/NotFoundView/NotFoundView";
 import AuthView from "./views/AuthView/AuthView";
-
-import { ValidatorRouter } from './Validator/ValidatorRouter'
-
-import { useState } from "react";
+import { ValidatorRouter } from "./Validator/ValidatorRouter";
 
 
 
-function App() {
+function App({ user }) {
 
-  const [user, setuser] = useState(null) 
-
-  const login = () => {
-    setuser({
-      id: 1,
-      name: 'John'
-    })
-  }
-
-  const logout = () => setuser(null)
- 
   return (
     <section className="App">
       
       <Header />
-      {
-        user ? (
-          <button onClick={logout}> Logout </button>
-        ): (
-          <button onClick={login}> Login </button>
-        )
-      }
-
       <main>
         <Routes>
           <Route path="/" element={<FeedView />}> </Route>
