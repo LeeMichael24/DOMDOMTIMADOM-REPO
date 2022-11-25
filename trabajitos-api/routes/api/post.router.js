@@ -24,9 +24,9 @@ router.get("/:identifier",
     postController.findOneById);
 
 //Funcionalidad de usuario 
-router.post("/",
-    authentication,
-    authorization(ROLES.USER),
+    router.post("/",
+    /* authentication,
+    authorization(ROLES.USER), */
     postValidators.createPostValidator,
     runValidations,
     postController.create);
