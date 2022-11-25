@@ -9,13 +9,16 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GoogleOAuthProvider clientId="560483202227-e005tg2o3les19elj9rkl728lh2d3rc4.apps.googleusercontent.com">
-      <App />
-    </GoogleOAuthProvider>
-    <ToastContainer theme = 'dark' position= 'bottom-right' />
+    <BrowserRouter>
+      <GoogleOAuthProvider clientId="560483202227-e005tg2o3les19elj9rkl728lh2d3rc4.apps.googleusercontent.com">
+        <App />
+      </GoogleOAuthProvider>
+      <ToastContainer theme = 'dark' position= 'bottom-right' />
+    </BrowserRouter>
   </React.StrictMode>
 )
 

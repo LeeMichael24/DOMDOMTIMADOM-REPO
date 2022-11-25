@@ -134,8 +134,6 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
                                 src={image}
                                 alt="Third slide"
                             />
-
-                
                         </Carousel.Item>
                     </Carousel>
 
