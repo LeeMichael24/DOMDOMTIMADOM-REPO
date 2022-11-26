@@ -7,9 +7,10 @@ import React, { useState } from 'react';
 
 import { Link } from "react-router-dom";
 
-
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+    const navigate = useNavigate();
 
     const [show, setShow] = useState(false);
 
@@ -40,8 +41,8 @@ const Header = () => {
                                 {/* <button className={classes["button-login"]} onClick={logout}> Logout </button>
                                 <button className={classes["button-login"]} onClick={login}> Login </button> */}
                                 
-                                <button className={classes["button-login"]} > Logout </button>
-                                <button className={classes["button-login"]} > Login </button>
+                    <button className={classes["button-login"]} onClick={ () => navigate("/auth/signin") }> Logout </button>
+                    <button className={classes["button-login"]} onClick={ () => navigate("/auth/signup") }> Login </button>
                             
                         
 

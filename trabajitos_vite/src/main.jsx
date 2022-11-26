@@ -1,23 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-import { GoogleOAuthProvider } from '@react-oauth/google';
+import { ConfigProvider } from './contexts/ConfigContext';
+import { UserContextProvider } from './contexts/UserContext';
+import { BrowserRouter } from 'react-router-dom';
+import AppComponent from './App'
+import LoadingSpinner from './components/LoadSpinner/LoadingSpinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <GoogleOAuthProvider clientId="560483202227-e005tg2o3les19elj9rkl728lh2d3rc4.apps.googleusercontent.com">
-        <App />
-      </GoogleOAuthProvider>
-      <ToastContainer theme = 'dark' position= 'bottom-right' />
+      <ConfigProvider>
+        <UserContextProvider>
+        <AppComponent/>
+        <ToastContainer theme = 'dark' position= 'bottom-right' />
+        <LoadingSpinner/>
+        </UserContextProvider>
+      </ConfigProvider>
     </BrowserRouter>
   </React.StrictMode>
 )
