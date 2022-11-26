@@ -32,5 +32,3 @@ router.get("/:identifier",
     postController.create);
 
 module.exports = router;
-
-
