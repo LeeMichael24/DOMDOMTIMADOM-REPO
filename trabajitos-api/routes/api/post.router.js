@@ -32,5 +32,12 @@ router.get("/:identifier",
     runValidations,
     postController.create);
 
+/*     router.patch("/visibility/:identifier",
+    authentication,
+    authorization(ROLES.USER),
+    postValidators.findPostByIdValidator,
+    runValidations,
+    postController.togglePostVisibility
+); */
 
 module.exports = router;
