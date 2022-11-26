@@ -4,14 +4,15 @@ import logoLogin from '../../assets/images/Logo-login.png';
 import { GoogleLogin } from '@react-oauth/google';
 import ModalLogin from "./Modal-Login/modalLogin";
 import React, { useState } from 'react';
+import Button from "../Buttom/Buttom";
 
-import { Link } from "react-router-dom";
-
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useUserContext } from "../../contexts/UserContext";
 
 const Header = () => {
+    const { logout, user } = useUserContext();
     const navigate = useNavigate();
-
+    
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -36,16 +37,16 @@ const Header = () => {
                 </div>
                 <div className={classes["nav-container-login"]}>
                     <figure>
-
-                        {/* <button className={classes['button-login']} onClick={handleShow}> <img width="55px" src={logoLogin} /> </button> */}
-                                {/* <button className={classes["button-login"]} onClick={logout}> Logout </button>
-                                <button className={classes["button-login"]} onClick={login}> Login </button> */}
-                                
-                    <button className={classes["button-login"]} onClick={ () => navigate("/auth/signin") }> Logout </button>
-                    <button className={classes["button-login"]} onClick={ () => navigate("/auth/signup") }> Login </button>
-                            
-                        
-
+                    {
+                        !user ?
+                            <>
+                            <Button className={classes["button-login"]} onClick={() => navigate("/auth/signin")}> Sign in </Button>
+                            <Button className={classes["button-login"]} onClick={() => navigate("/auth/signup")}> Sign up </Button>
+                            </> :
+                            <>
+                            <Button onClick={() => { logout() }}> Sign out </Button>
+                            </>
+                    }
                     </figure>
                 </div>
             </nav>

@@ -12,6 +12,7 @@ const { authentication, authorization } = require("../../middlewares/auth.middew
 
 router.get("/", postController.findAll);
 router.get("/own", authentication, postController.findOwn);
+
 router.get("/user/:identifier",
     postValidators.findByIdValidator,
     runValidations,
@@ -25,10 +26,11 @@ router.get("/:identifier",
 
 //Funcionalidad de usuario 
     router.post("/",
-    /* authentication,
-    authorization(ROLES.USER), */
+    authentication,
+    authorization(ROLES.USER), 
     postValidators.createPostValidator,
     runValidations,
     postController.create);
+
 
 module.exports = router;

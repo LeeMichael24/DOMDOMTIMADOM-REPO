@@ -12,5 +12,6 @@ router.post("/signup",
 );
 
 router.post("/signin", authController.login)
+/* router.get("/whoami", authentication, authController.whoami); */
 
 module.exports = router;  

@@ -44,6 +44,7 @@ export const UserContextProvider = (props) => {
 
     } catch (error) {
       logout();
+      toast.error(msgs[String(status)]);
     } finally {
       stopLoading();
     }

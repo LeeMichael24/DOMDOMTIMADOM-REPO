@@ -9,34 +9,35 @@ import { useEffect } from 'react';
 
 const AuthView = () => {
     const navigate = useNavigate();
-    const { login, register } = useUserContext();
-
+    const { login, register, user } = useUserContext();
+  
     const onLoginHandler = async (identifier, password) => {
-        await login(identifier, password);
+      //Ejecutar el servicio de login <- User context
+      await login(identifier, password);
     }
-
+  
     const onRegisterHandler = async (username, email, password) => {
-        await register(username, email, password); 
+      await register(username, email, password);
     }
-
+  
     useEffect(() => {
       if (user) {
-        navigate("/")
+        navigate("/");
       }
     }, [user])
-    
-    
+  
     return (
-        <div className={classes['container-auth']}>
-            <div className={classes['Card-auth']}>
-            <Routes>
-                <Route path='signin' element={<LoginForm onLogin={onLoginHandler}/> }/>
-                <Route path='signup' element={<RegisterForm onRegister={onRegisterHandler}/> }/>
-                <Route path='*' element={<Navigate to='/not-found' />} />
-            </Routes>
-            </div>
+      <div className={classes["container-auth"]}>
+        <div className={classes["Card-auth"]}>
+          <Routes>
+            <Route path='signin' element={<LoginForm onLogin={onLoginHandler} />} />
+            <Route path='signup' element={<RegisterForm onRegister={onRegisterHandler} />} />
+            <Route path='*' element={<Navigate to="/not-found" />} />
+          </Routes>
         </div>
+      </div>
     )
-}
-
+  }
+  
 export default AuthView;
+
