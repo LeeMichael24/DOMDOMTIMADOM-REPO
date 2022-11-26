@@ -11,6 +11,7 @@ function SinglePost({ name = '', lastName='', image = '', number = '' }) {
         <div className={classes['section-singlepost']}>
             {Array.from({ length: 1 }).map((_, idx) => (
                 <Col>
+
                     <Link className={classes["ver-mas"]} to="f2">
                         <Card className={classes['Card']}>
 
@@ -52,6 +53,7 @@ function SinglePost({ name = '', lastName='', image = '', number = '' }) {
                             </Card.Body>
                         </Card>
                     </Link>
+                
                 </Col>
             ))}
         </div>

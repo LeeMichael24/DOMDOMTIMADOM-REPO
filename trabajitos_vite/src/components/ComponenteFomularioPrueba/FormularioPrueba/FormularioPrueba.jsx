@@ -35,7 +35,7 @@ const FormularioPrueba = ({ onAddPost = () => {} }) => {
                     <label className={classes['label-form']}> 
                         Foto de perfil *
                     <input className={classes['form-image-p']} name="imageProfile" type="url" placeholder="url"/>
-                </label>
+                    </label>
                     <label className={classes['label-form']}>
                             Correo electrónico *
                             <input className={classes['email-form']} name="email"/>
