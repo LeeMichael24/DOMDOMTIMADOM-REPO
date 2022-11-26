@@ -29,34 +29,34 @@ const FormularioPrueba = ({ onAddPost = () => {} }) => {
                     <label className={classes['label-form']}>
                                 Nombre Completo*
                                 
-                        <input name="name"  value={nameField} onChange={(e) => { setName(e.target.value)} } placeholder="Nombres" required/>
-                        <input name="lastName" value={lastNameField} onChange={(e) => { setLastName(e.target.value)} } placeholder="apellidos" required/>
+                        <input name="name"   placeholder="Nombres" required/>
+                        <input name="lastName"  placeholder="apellidos" required/>
                         </label>
                     <label className={classes['label-form']}> 
                         Foto de perfil *
-                    <input className={classes['form-image-p']} name="imageProfile" value={imageField} onChange={(e) => { setImage(e.target.value)} } type="url" placeholder="url"/>
+                    <input className={classes['form-image-p']} name="imageProfile"  type="url" placeholder="url"/>
                     </label>
                     <label className={classes['label-form']}>
                             Correo electrónico *
-                            <input value={emailField} onChange={(e) => { setEmail(e.target.value)} } className={classes['email-form']} name="email"/>
+                            <input  className={classes['email-form']} name="email"/>
                     </label>
                     <label className={classes['label-form']}>
                             Telefono *
-                            <input value={numberField} onChange={(e) => { setNumber(e.target.value)} } name="number" required/>
+                            <input  name="number" required/>
                     </label>
 
                     <label className={classes['label-form']}>
                             Ubicación *
-                            <input value={locationField} onChange={(e) => { setLocation(e.target.value)} } name="location" required/>
+                            <input  name="location" required/>
                     </label>
                     <label className={classes['label-form']}>
                             Descripción *
-                            <textarea value={descriptionField} onChange={(e) => { setDescription(e.target.value)} } name="description" rows={4} required/>
+                            <textarea  name="description" rows={4} required/>
                     </label>
 
                     <label className={classes['label-form']}> 
                                 Proyectos/ respositorio
-                            <input value={imageProfileField} onChange={(e) => { setImageProfile(e.target.value)} } name="image" type="url" placeholder="url"/>
+                            <input name="image" type="url" placeholder="url"/>
                     </label>
 
                     <button  className={classes['btn-form']} type='submit' required>
