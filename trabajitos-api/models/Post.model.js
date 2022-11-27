@@ -41,18 +41,18 @@ const PostSchema = new Schema({
         type: String,
         required: true
     },
-    category: {
+    /* category: {
         type: String
-    },
+    }, */
     hidden: {
         type: Boolean,
         default: false
     },
-    user: {
+    /* user: {
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true
-    }
+    } */
 
 }, { timestamps: true });
 
