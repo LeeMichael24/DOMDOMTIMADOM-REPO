@@ -4,9 +4,13 @@ import Accordion from './Accordion/Accordion';
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Banner from './Banner/Banner';
+import { useConfigContext } from '../../contexts/ConfigContext';
+import axios from 'axios';
+
 
 const FeedView = () => {
   const [posts, setPosts] = useState([]);
+  const { startLoading, stopLoading} = useConfigContext();
 
   useEffect(() => {
     fetchPosts();
@@ -14,15 +18,19 @@ const FeedView = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('http://localhost:3500/api/post/');
+      startLoading();
+      /* const response = await fetch('http://localhost:3500/api/post/'); */
 
-        if (response.ok) {
-          const data = await response.json();
-          setPosts(data.posts);
-        }
+      const { data } = await axios.get("/post");
+        setPosts(data.posts);
     } catch (error) {
       /* toast.error('Unexpected error!'); */
-    }
+    } finally {
+      stopLoading();
+    } 
+    
+
+    
   }
     return(
       <section>
