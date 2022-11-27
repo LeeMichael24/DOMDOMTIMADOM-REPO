@@ -4,7 +4,7 @@ import logoLogin from '../../assets/images/Logo-login.png';
 import { GoogleLogin } from '@react-oauth/google';
 import ModalLogin from "./Modal-Login/modalLogin";
 import React, { useState } from 'react';
-import Button from "../Buttom/Buttom";
+import ButtonExtra from "../Buttom/ButtomExtra";
 
 import { useNavigate, Link } from "react-router-dom";
 import { useUserContext } from "../../contexts/UserContext";
@@ -40,11 +40,11 @@ const Header = () => {
                     {
                         !user ?
                             <>
-                            <Button className={classes["button-login"]} onClick={() => navigate("/auth/signin")}> Sign in </Button>
-                            <Button className={classes["button-login"]} onClick={() => navigate("/auth/signup")}> Sign up </Button>
+                            <ButtonExtra className={classes["button-login"]} onClick={() => navigate("/auth/signin")}> Sign in </ButtonExtra>
+                            <ButtonExtra className={classes["button-login"]} onClick={() => navigate("/auth/signup")}> Sign up </ButtonExtra>
                             </> :
                             <>
-                            <Button onClick={() => { logout() }}> Sign out </Button>
+                            <ButtonExtra onClick={() => { logout() }}> Sign out </ButtonExtra>
                             </>
                     }
                     </figure>

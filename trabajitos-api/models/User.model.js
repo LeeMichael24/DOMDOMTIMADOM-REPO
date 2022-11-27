@@ -18,7 +18,7 @@ const userSchema = new Schema({
         trim : true,
         unique: true
     },
-    hashedPassword: {
+    hashedpassword: {
         type: String,
         required : true
     },
@@ -36,38 +36,40 @@ const userSchema = new Schema({
 }, {timestamps : true });
 
 
-userSchema.methods = {
+userSchema.methods ={
     encryptPassword: function (password) {
-      if (!password) return "";
-  
-      try {
-        const encryptedPassword = crypto.pbkdf2Sync(
-          password,
-          this.salt,
-          1000, 64,
-          `sha512`
-        ).toString("hex");
-  
-        return encryptedPassword;
-      } catch (error) {
-        debug({ error });
-        return "";
-      }
+        if (!password) return "";
+
+        try {
+            const ecryptedPassword = crypto.pbkdf2Sync(
+                password,
+                this.salt,
+                1000,64,
+                `sha512`
+            ).toString("hex");
+            return ecryptedPassword;
+
+        } catch (error) {
+            debug ({error});
+            return "";
+            
+        }
     },
     makeSalt: function () {
-      return crypto.randomBytes(16).toString("hex");
+        return crypto.randomBytes(16).toString("hex");
     },
-    comparePassword: function (password) {
-      return this.hashedPassword === this.encryptPassword(password);
+    comparePassword: function(password){
+        return this.hashedpassword == this.encryptPassword(password);
     }
-  }
-  
-  userSchema.virtual("password")
+}
+
+
+userSchema.virtual("password")
     .set(function (password = crypto.randomBytes(16).toString()) {
-      if (!password) return;
-  
-      this.salt = this.makeSalt();
-      this.hashedPassword = this.encryptPassword(password);
+        if (!password)return;
+
+        this.salt = this.makeSalt();
+        this.hashedpassword = this.encryptPassword(password);
     })
-  
-  module.exports = Mongoose.model("User", userSchema);
+
+module.exports = Mongoose.model("User", userSchema);

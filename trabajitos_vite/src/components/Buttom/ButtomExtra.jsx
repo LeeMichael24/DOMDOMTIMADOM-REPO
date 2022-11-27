@@ -1,6 +1,6 @@
 import classes from './Buttom.module.scss';
 
-const Button = ({ children, className, ...rest }) => {
+const ButtonExtra = ({ children, className, ...rest }) => {
   return (
     <button className={`${classes["Button"]} ${className ?? ""}`} {...rest}>
       {/* Texto o contenido del botón */}
@@ -9,5 +9,5 @@ const Button = ({ children, className, ...rest }) => {
   )
 }
 
-export default Button;
+export default ButtonExtra;
 

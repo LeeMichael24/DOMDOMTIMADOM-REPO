@@ -37,7 +37,7 @@ const AuthView = () => {
         </div>
       </div>
     )
-  }
+}
   
 export default AuthView;
 

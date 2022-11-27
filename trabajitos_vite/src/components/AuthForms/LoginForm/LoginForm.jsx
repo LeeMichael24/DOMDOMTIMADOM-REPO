@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import Button from '../../Buttom/Buttom';
+import ButtonExtra from '../../Buttom/ButtomExtra';
 import classes from './../AuthForm.module.scss';
 
 const LoginForm = ({ onLogin = () => { } }) => {
@@ -52,9 +52,9 @@ const LoginForm = ({ onLogin = () => { } }) => {
             onChange={({ target }) => { setPassword(target.value) }} />
         </label>
 
-        <Button type="submit" disabled={hasErrors()}>
+        <ButtonExtra type="submit" disabled={hasErrors()}>
           Sign in
-        </Button>
+        </ButtonExtra>
       </form>
     </section>
   );
