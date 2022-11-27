@@ -1,15 +1,14 @@
 import FormularioPrueba from "./FormularioPrueba/FormularioPrueba";
 import { toast } from 'react-toastify';
-import { useConfigContext } from '../../contexts/ConfigContext';
 import axios from 'axios';
 
 const RecibeFormularioP = () => {
-  const { startLoading, stopLoading} = useConfigContext();
 
     const savePost = async (name, lastName, email, number, location, description, image, imageProfile) => {
       try { 
-         startLoading();
-         await axios.post('/post', {name, lastName, email, number, location, description, image, imageProfile })
+      
+         await axios.post("/post", {name, lastName, email, number, location, description, image, imageProfile });
+         toast.success("Post saved!");
 
       } catch (error) {
         const { status } = error.response || { status: 500 };
@@ -18,9 +17,7 @@ const RecibeFormularioP = () => {
           "404": "Not found",
           "500": "Something went wrong!"
         }
-        toast.error("Unexpected error savePost")
-      } finally {
-        stopLoading();
+        toast.error(msg[status.toString()] || "Unexpected error savePost");
       }
     }
   

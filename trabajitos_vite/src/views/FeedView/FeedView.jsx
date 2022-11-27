@@ -20,7 +20,6 @@ const FeedView = () => {
     try {
       startLoading();
       /* const response = await fetch('http://localhost:3500/api/post/'); */
-
       const { data } = await axios.get("/post");
         setPosts(data.posts);
     } catch (error) {
