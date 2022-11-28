@@ -49,6 +49,12 @@ const FormularioPrueba = ({ onAddPost = () => {} }) => {
                             Ubicación *
                             <input  name="location" required/>
                     </label>
+
+                    <label className={classes['label-form']}>
+                            Categoría *
+                            <input  name="category" required/>
+                    </label>
+
                     <label className={classes['label-form']}>
                             Descripción *
                             <textarea  name="description" rows={4} required/>

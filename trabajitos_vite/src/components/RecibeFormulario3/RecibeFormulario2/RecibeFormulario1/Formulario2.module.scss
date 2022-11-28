@@ -180,6 +180,7 @@
 
 .descripcion{
     text-align: justify;
+    padding-right: 40px;
     
 }
 
@@ -196,6 +197,7 @@
     max-width: 100%;
     max-height: 500px;
     padding-top: 20px;
+   
     
     
 }
@@ -204,5 +206,20 @@
     max-height: 600px;
     padding-top: 20px;
     position: absolute;
+   
+
+}
+
+
+
+.category{
+    background-color: rgba(5, 133, 122, 0.5);
+    height: 50px;
+    width: 125px;
+    border-radius: 1rem;
+    text-align: center;
+    align-content: center;
+    padding-top: 10px;
+   
 }
 

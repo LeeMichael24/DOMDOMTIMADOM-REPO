@@ -9,9 +9,12 @@ const RecibeFormulario2 = ({ posts = {} }) => {
             lastName={post.lastName}
             email={post.email}
             number={post.number}
+            location= {post.location}
             description={post.description}
             image={post.image}
             imageProfile={post.imageProfile}
+            category = {post.category}
+            comments = {post.comments}
             />
         )
     })
