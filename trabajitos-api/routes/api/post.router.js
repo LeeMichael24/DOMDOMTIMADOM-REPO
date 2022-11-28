@@ -22,7 +22,8 @@ router.get("/user/:identifier",
 router.get("/:identifier",
     postValidators.findByIdValidator,
     runValidations,
-    postController.findOneById);
+    postController.findOneById
+);
 
 //Funcionalidad de usuario 
     router.post("/",
@@ -30,7 +31,8 @@ router.get("/:identifier",
     authorization(ROLES.USER),
     postValidators.createPostValidator,
     runValidations,
-    postController.create);
+    postController.create
+);
 
 /*     router.patch("/visibility/:identifier",
     authentication,
