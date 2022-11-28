@@ -96,13 +96,13 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
             <div className={classes["right_side"]}>
                 <div className={classes["about"]}>
                     <h2 className={classes["title2"]}>Datos generales</h2>
-                    <p className={classes["descripcion"]}>{description}
+                    <p className={classes["descripcion"]}>{ description }
                     </p>
                 </div>
 
                 <div className={classes["abilities"]}>
                     <h2 className={classes["title2"]}> Habilidades</h2>
-                    <p className={classes["category"]}>{category}
+                    <p className={classes["category"]}>{ category }
                     </p>
                   
                 </div>

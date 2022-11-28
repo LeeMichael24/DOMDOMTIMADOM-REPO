@@ -16,9 +16,10 @@ const FormularioPrueba = ({ onAddPost = () => {} }) => {
             description: data.get("description"),
             image: data.get("image"),
             imageProfile: data.get("imageProfile"),
+            category: data.get("category")
         });
         /* Ejecutar el insert */
-        onAddPost(data.get('name'), data.get('lastName'), data.get('email'), data.get('number'), data.get('location'), data.get('description'), data.get('image'), data.get('imageProfile'));
+        onAddPost(data.get('name'), data.get('lastName'), data.get('email'), data.get('number'), data.get('location'), data.get('description'), data.get('image'), data.get('imageProfile'), data.get('category'));
     }
     return (
         <section className={classes['post-form-section']}>

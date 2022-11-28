@@ -14,6 +14,7 @@ const Posts = ({ posts = {} }) => {
             description={post.description}
             image={post.image}
             imageProfile={post.imageProfile}
+            category={post.category}
             />
         )
     })
