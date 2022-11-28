@@ -9,7 +9,7 @@ controller.create = async (req, res) => {
   try {
       const {name, lastName, email, number, location, description, image, imageProfile} = req.body;
 
-      /* const { _id: userId } = req.user; */
+       const { _id: userId } = req.user; 
 
 
  const post = new Post({
@@ -21,7 +21,7 @@ controller.create = async (req, res) => {
   description: description,
   image: image,
   imageProfile: imageProfile,
-  /* user : userId */
+  user : userId 
  });
 
  const newPost = await post.save();
@@ -43,7 +43,7 @@ controller.findAll = async (req, res) =>{
       const posts = 
           await Post
           .find({ hidden: false })
-         /*  .populate("user", "username email"); */
+          .populate("user", "username email");
 
       return res.status(200).json ({ posts })
       
@@ -60,7 +60,7 @@ controller.findOwn = async (req, res) =>{
       const posts = 
       await Post
       .find({ user: userId})
-      /* .populate("user", "username email"); */
+      .populate("user", "username email");
       
       return res.status(200).json({ posts})
 
@@ -89,7 +89,7 @@ controller.findOneById = async (req, res) =>{
   try {
 
     const {identifier} = req.params;
-    const post = await Post.findOne({_id: indentifier , hidden : false});
+    const post = await Post.findOne({_id: identifier , hidden : false});
 
     if(!post){
       return res.status(404).json({error: "Post no encontrado"});
