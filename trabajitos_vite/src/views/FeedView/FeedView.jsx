@@ -23,7 +23,7 @@ const FeedView = () => {
       const { data } = await axios.get("/post");
         setPosts(data.posts);
     } catch (error) {
-      /* toast.error('Unexpected error!'); */
+      toast.error('Unexpected error!');
     } finally {
       stopLoading();
     } 
