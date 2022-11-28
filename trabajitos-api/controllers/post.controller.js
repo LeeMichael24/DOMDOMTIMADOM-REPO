@@ -7,7 +7,7 @@ const controller = {};
 
 controller.create = async (req, res) => {
   try {
-      const {name, lastName, email, number, location, description, image, imageProfile} = req.body;
+      const {name, lastName, email, number, location, description, image, imageProfile, category , comments} = req.body;
 
        const { _id: userId } = req.user; 
 
@@ -21,6 +21,8 @@ controller.create = async (req, res) => {
   description: description,
   image: image,
   imageProfile: imageProfile,
+  category : category,
+  comments : comments,
   user : userId 
  });
 
