@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 import ButtonExtra from '../../Buttom/ButtomExtra';
 import classes from './../AuthForm.module.scss';
 
+
+
 const LoginForm = ({ onLogin = () => { } }) => {
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
@@ -26,12 +28,12 @@ const LoginForm = ({ onLogin = () => { } }) => {
   }
 
   return (
-    <section className={classes["container"]}>
-      <h3> Tell us who you are... </h3>
+    <section className={classes["container-login"]}>
+      <h3> Inicio de session </h3>
 
       <form onSubmit={onSubmitHandler}>
         <label>
-          I am... *
+          Nombre de usuario *
           <input
             className={errors["identifier"] ? classes["error"] : ""}
             type={"text"}
@@ -42,7 +44,7 @@ const LoginForm = ({ onLogin = () => { } }) => {
         </label>
 
         <label>
-          Passphrase... *
+          Contraseña *
           <input
             className={errors["password"] ? classes["error"] : ""}
             type={"password"}
@@ -52,7 +54,7 @@ const LoginForm = ({ onLogin = () => { } }) => {
             onChange={({ target }) => { setPassword(target.value) }} />
         </label>
 
-        <ButtonExtra type="submit" disabled={hasErrors()}>
+        <ButtonExtra className={classes['ButtonExtra']} type="submit" disabled={hasErrors()}>
           Sign in
         </ButtonExtra>
       </form>

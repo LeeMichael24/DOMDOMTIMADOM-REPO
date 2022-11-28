@@ -1,7 +1,6 @@
 
-.container-auth{
+.container-auth-view{
     width: 100%;
-    flex: 1;
     height: 90vh;
 
     display: flex;
@@ -9,13 +8,17 @@
     align-items: center;
 
     .Card-auth{
-        width: 100%;
+        width: 130%;
         max-width: 600px;
+        height: 500px;
+        background: whitesmoke;
 
-        background: red;
+        padding: 1rem;
+        border-radius: 1rem;
 
-        padding: 2rem;
-        border-radius: 0.5rem;
+        
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
     }
 }
 

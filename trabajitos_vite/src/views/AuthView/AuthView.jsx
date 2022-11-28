@@ -27,7 +27,7 @@ const AuthView = () => {
     }, [user])
   
     return (
-      <div className={classes["container-auth"]}>
+      <div className={classes["container-auth-view"]}>
         <div className={classes["Card-auth"]}>
           <Routes>
             <Route path='signin' element={<LoginForm onLogin={onLoginHandler} />} />

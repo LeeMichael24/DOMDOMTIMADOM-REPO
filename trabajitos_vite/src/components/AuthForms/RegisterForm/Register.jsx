@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import ButtonExtra from '../../Buttom/ButtomExtra';
 import classes from '../AuthForm.module.scss';
 
+
 const RegisterForm = ({ onRegister = () => { } }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

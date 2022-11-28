@@ -24,7 +24,7 @@ const Header = () => {
             <nav className={classes['nav']}>
                 <div className={classes["nav-container-home"]}>
                     <figure>
-                        <Link className={classes['button-home-login']} to = "/"><img width="240px" src={ trabajitos } /></Link>
+                    <Link className={classes['button-home-login']} to = "/"><img width="240px" src={ trabajitos } /></Link>
                     </figure>
                 </div>
                 <div className={classes["nav-container-bar"]}>

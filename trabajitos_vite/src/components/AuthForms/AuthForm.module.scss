@@ -1,13 +1,18 @@
-.container {
+.container-login {
     width: 100%;
-  
+
+    background: whitesmoke;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin: 0 auto;
+
+    margin-top: 70px;
   
     h3 {
       font-family: "Montserrat", sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      text-align: center;
     }
   
     form {
@@ -19,12 +24,14 @@
       flex-direction: column;
       gap: 1rem;
   
+      margin: 0 auto;
       label {
         position: relative;
   
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
+        
   
         input,
         textarea {
@@ -43,7 +50,7 @@
           }
   
           &.error {
-            outline: 2px solid crimson;
+            outline: 2px solid rgb(40, 29, 31);
           }
         }
   
@@ -70,3 +77,29 @@
       }
     }
   }
+
+.ButtonExtra{
+  background: #00b74c;
+  padding: 0.5rem 1rem;
+
+  font-weight: 400;
+  color: white;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+      transform: scale(1.05) rotateZ(2deg);
+  }
+
+  &:disable{
+      color: #bbb;
+      cursor: not-allowed;
+  }
+
+  margin-top: 50px;
+}

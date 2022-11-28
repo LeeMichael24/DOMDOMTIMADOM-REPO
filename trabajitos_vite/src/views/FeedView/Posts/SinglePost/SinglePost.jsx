@@ -15,7 +15,7 @@ function SinglePost({ name = '', lastName='', image = '', number = '' }) {
                     <Link className={classes["ver-mas"]} to="f2">
                         <Card className={classes['Card']}>
 
-                            <Card.Img variant="top" src={ image } />
+                            <Card.Img className={classes["card-img-top"]} variant="top" src={ image } />
                             <Card.Body>
                                 <Card.Title>
                                 <div className={classes["contactInfo"]}>

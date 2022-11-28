@@ -6,8 +6,18 @@
 .Card{
     cursor: pointer;
     height: 50px;
-    width: 312px;
+    width: 350px;
 }
+
+.card-img-top{
+
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 312px;
+  object-fit: cover;
+}
+
 
 .Card:hover{
     border-color: #01ed64;
