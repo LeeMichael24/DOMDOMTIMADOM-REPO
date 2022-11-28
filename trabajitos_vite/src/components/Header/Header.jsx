@@ -44,7 +44,7 @@ const Header = () => {
                             <ButtonExtra className={classes["button-login"]} onClick={() => navigate("/auth/signup")}> Sign up </ButtonExtra>
                             </> :
                             <>
-                            <ButtonExtra onClick={() => { logout() }}> Sign out </ButtonExtra>
+                            <ButtonExtra className={classes["button-sign-out"]} onClick={() => { logout() }}> Sign out </ButtonExtra>
                             </>
                     }
                     </figure>
