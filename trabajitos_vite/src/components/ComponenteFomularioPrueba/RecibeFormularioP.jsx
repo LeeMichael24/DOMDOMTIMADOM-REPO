@@ -9,7 +9,7 @@ const RecibeFormularioP = () => {
       
          await axios.post("/post", {name, lastName, email, number, location, description, image, imageProfile, category });
          toast.success("Post saved!");
-         toast.success("Ve a inicio para tu post!");
+         toast.success("Ve al inicio para tu post!");
 
       } catch (error) {
         const { status } = error.response || { status: 500 };

@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     box-shadow: 0  35px 55px rgba(0,0,0,0.1);
+    
 }
 
 
@@ -195,27 +196,34 @@
 }
 
 
-.imgs{
-    max-width: 100%;
-    max-height: 500px;
-    padding-top: 20px;
+
    
     
     
-}
+
 .Carousel{
     max-width: 875px;
     max-height: 600px;
     padding-top: 20px;
-    position: absolute;
+    
+    
 }
 
-.d-blockw-100{
-    position: absolute;
+
+
+.adentro{
+    object-fit:cover;
+    width: 100%;
+
+    max-height: 450px;
+    position:relative;
     top: 0;
-    left: 0;
-    object-fit: cover;
+    
+
 }
+
+
+
 
 .profileText .imgBx{
     position: relative;

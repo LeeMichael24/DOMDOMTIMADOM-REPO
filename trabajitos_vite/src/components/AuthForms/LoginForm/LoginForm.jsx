@@ -29,7 +29,7 @@ const LoginForm = ({ onLogin = () => { } }) => {
 
   return (
     <section className={classes["container-login"]}>
-      <h3> Inicio de session </h3>
+      <h3> Inicio de sesión </h3>
 
       <form onSubmit={onSubmitHandler}>
         <label>

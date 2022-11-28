@@ -114,7 +114,7 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
                     <Carousel className={classes["Carousel"]}>
                         <Carousel.Item className= {classes["imgs"]}>
                             <img
-                                className="d-blockw-100"
+                                className= {classes["adentro"]}
                                 src={image}
                                 alt="First slide"
                             />
@@ -122,7 +122,7 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
                         </Carousel.Item>
                         <Carousel.Item className= {classes["imgs"]}>
                             <img
-                                className="d-blockw-100"
+                                className= {classes["adentro"]}
                                 src={image}
                                 alt="Second slide"
                             />
@@ -131,7 +131,7 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
                         </Carousel.Item>
                         <Carousel.Item className= {classes["imgs"]}>
                             <img
-                                className="d-blockw-100"
+                                className= {classes["adentro"]}
                                 src={image}
                                 alt="Third slide"
                             />
