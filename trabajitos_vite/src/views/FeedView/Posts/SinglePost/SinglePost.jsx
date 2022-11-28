@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 
 
 function SinglePost({ name = '', lastName='', image = '', number = '' }) {
+
+
+
+
+
+
     return (
         <div className={classes['section-singlepost']}>
             {Array.from({ length: 1 }).map((_, idx) => (

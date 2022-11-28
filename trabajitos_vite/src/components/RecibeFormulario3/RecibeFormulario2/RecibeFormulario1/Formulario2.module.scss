@@ -52,7 +52,7 @@
 }
 .profileText h2{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 25px;
     margin-top: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -77,12 +77,14 @@
 .title{
     color:#fff;
     text-transform: uppercase;
-    font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 20px;
     margin: 0 auto;
+    font-size: 23px;
 }
-
+.h2-name-last{
+    font-size: 50px;
+}
 
 .contactInfo ul{
     position: relative;

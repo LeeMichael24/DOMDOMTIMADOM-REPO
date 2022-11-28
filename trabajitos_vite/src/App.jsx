@@ -16,10 +16,9 @@ import NotFoundView from "./views/NotFoundView/NotFoundView";
 import AuthView from "./views/AuthView/AuthView";
 
 
-
-
-function App({user}) {
+function App() {
  
+
   return (
     <section className="App">
       

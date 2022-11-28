@@ -15,7 +15,7 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
                     <div className={classes["imgBx"]}>
                         <img src={imageProfile} alt="" />
                     </div>
-                    <h2> {name} {lastName} <br /> </h2>
+                    <h2 className={classes["h2-name-last"]}> {name} {lastName} <br /> </h2>
                 </div>
 
                 {/* < Contactame >  */}
