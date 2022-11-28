@@ -17,6 +17,7 @@ import AuthView from "./views/AuthView/AuthView";
 
 
 
+
 function App({user}) {
  
   return (
@@ -33,7 +34,10 @@ function App({user}) {
           <Route path="auth/*" element={<AuthView />}> </Route>
         </Routes>
       </main>
+      
       <Footer />
+
+      <modal/>
     </section>
   )
 }

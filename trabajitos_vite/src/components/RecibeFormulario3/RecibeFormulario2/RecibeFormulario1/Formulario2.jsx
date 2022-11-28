@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 
-const formulario2 = ({ name = '', lastName = '', email = '', number = '', location = '', description = '', image = '', imageProfile = '' }) => {
+const formulario2 = ({ name = '', lastName = '', email = '', number = '', location = '', description = '', image = '', imageProfile = '' , category = ''}) => {
     return (
         <div className={classes["container"]} >
 
@@ -102,8 +102,9 @@ const formulario2 = ({ name = '', lastName = '', email = '', number = '', locati
 
                 <div className={classes["abilities"]}>
                     <h2 className={classes["title2"]}> Habilidades</h2>
-                    <p className={classes["descripcion"]}>{description}
+                    <p className={classes["category"]}>{category}
                     </p>
+                  
                 </div>
 
                 {/* Carousel */}
