@@ -2,7 +2,7 @@ import { Navigate } from 'react-router-dom';
 import classes from './FormularioPrueba.module.scss';
 
 
-const FormularioPrueba = ({user}, { onAddPost = () => {} }) => {
+const FormularioPrueba = ({ onAddPost = () => {} }) => {
 
     /* if(!user){
         return <Navigate to='fp'/>
